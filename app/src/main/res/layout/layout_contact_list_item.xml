@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="10dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civ_contact_image"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_android"
+        app:civ_border_color="@color/black"
+        app:civ_border_width="0.5dp" />
+    <TextView
+        android:id="@+id/tv_contact_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/civ_contact_image"
+        android:text="Abhinav kumar"
+        android:textSize="20sp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="20dp"
+        android:textColor="@color/black"
+        />
+    <ProgressBar
+        android:id="@+id/pb_contact_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>

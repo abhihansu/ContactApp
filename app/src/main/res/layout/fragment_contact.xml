@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ContactFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/contact_relativeLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include layout="@layout/snippets_contact_toolbar" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/contact_relativeLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/contact_relativeLayout1">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/contact_image"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                app:civ_border_color="@color/black"
+                app:civ_border_width="1dp"
+                tools:src="@drawable/ic_android" />
+
+            <TextView
+                android:id="@+id/tv_contact_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/contact_image"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                tools:text="Abhinav Kumar" />
+
+            <ListView
+                android:layout_marginTop="10dp"
+                android:id="@+id/contact_information_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/tv_contact_name" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>
